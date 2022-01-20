@@ -1,0 +1,266 @@
+:root {
+    --main-bg-color: #C9A1F4;
+    --white-txt-color: #FFFF;
+    --cian-color: #38FED0;
+    --coral-color:#F25670;
+    --purple-color:#9B46C6;
+    --green-color:#14AF8B;
+    --wine-color:#7E1B2B;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+}
+
+
+.full-width {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0;
+}
+
+.purple {
+    color:var(--purple-color);
+}
+
+.green {
+    color: var(--green-color);
+}
+
+.wine {
+    color:var(--wine-color);
+}
+
+.background-purple {
+    background: var(--main-bg-color);
+}
+
+.background-purple:focus{
+    background: var(--main-bg-color);
+}
+
+.background-cian {
+    background-color: var(--cian-color);
+}
+
+.background-cian:focus{
+    background: var(--cian-color);
+}
+
+.background-coral {
+ background: var(--coral-color);
+}
+
+.background-coral:focus {
+    background: var(--coral-color);
+   }
+
+.background-wine {
+    background: var(--wine-color);
+}
+
+.logo {
+    margin: 10%;
+}
+
+.text-white {
+    color: var(--white-txt-color) !important;
+  }
+
+.title {
+ font-size: 25px;
+}
+
+.button {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+}
+
+.button:hover {
+    background: var(--main-bg-color);
+    border: none;
+}
+/*Figures*/
+.square:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.triangle:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+
+}
+
+.circle:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+
+}
+/*Styles Elements*/
+.body {
+    border-radius: 40px;
+    padding: 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+.padding-around {
+    padding: 30px;
+    padding-top: 60px;
+}
+
+/*Buttons*/
+.button-purple {
+    background-color: #9B46C6;
+    border: 0;
+    border-radius: 40px;
+}
+
+.button-purple:hover {
+    color:black !important;
+}
+
+.button-green {
+    background-color: #14AF8B;
+    border: 0;
+    border-radius: 40px;
+}
+
+.button-green:hover {
+    color:black !important;
+}
+
+.button-wine {
+    background-color: var(--wine-color);
+    border: 0;
+    border-radius: 40px;
+}
+
+.button-wine:hover {
+    color:black !important;
+}
+
+
+
+.input{
+    background: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    border-radius: 40px;
+    border: 0;
+}
+
+.input-result {
+    border-top: 0px;
+    border-left:0px;
+    border-right: 0px;
+    border-bottom: 2px solid white;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.input-result[readonly] {
+    border-top: 0px;
+    border-left:0px;
+    border-right: 0px;
+    border-bottom: 2px solid white;
+    border-radius: 40px;
+    text-align: center;
+    background: var(--main-bg-color);
+}
+
+.display {
+    display: block;
+}
+
+
+.potency {
+    margin-left: -8%;
+
+}
+
+.fa {
+    font-size: 60px !important;
+    position:absolute;
+    bottom: -80px;
+}
+
+.fa-caret-up {
+    font-size: 100px !important;
+    position: absolute;
+    bottom: -85px;
+}
+
+.form-label {
+    padding-left: 65px !important;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.rounded-3 {
+    border-radius: 30px !important;
+    padding: 5px !important;
+    height: 60px !important;
+    background: rgba(255, 255, 255, 0.4);
+    margin-bottom: 10px;
+}
+
+.rounded-3 input {
+    height: 30px !important;
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0);
+    margin-top: -12px;
+}
+
+.rounded-3 input:focus {
+    background: rgba(255, 255, 255, 0) !important;
+}
+
+input:focus {
+    border: 0px !important;
+    box-shadow: none !important;
+    outline: 0 none !important;
+    background: rgba(255, 255, 255, 0.4) !important;
+
+}
+
+select {
+    box-shadow: none !important;
+}
+
+#SelectMeasuresTriangle {
+    border-radius: 40px;
+    margin-left: 20px;
+    box-shadow: none;
+    background-color: var(--coral-color);
+}
+
+#SelectMeasuresSquare {
+    border-radius: 40px;
+    box-shadow: none;
+    background-color: var(--main-bg-color);
+}
+
+#SelectMeasuresCircle {
+    border-radius: 40px;
+    box-shadow: none;
+    background-color: var(--cian-color);
+}
+
+
