@@ -12,6 +12,26 @@ body {
     font-family: 'Comfortaa', cursive;
 }
 
+input {
+    border-radius: 40px !important;
+}
+
+input:focus {
+    border: 0px !important;
+    outline: 0 none !important;
+    background: rgba(255, 255, 255, 0.4) !important;
+
+} 
+
+.logo {
+    margin: 10%;
+}
+
+.body {
+    border-radius: 40px;
+    padding: 30px;
+}
+
 
 .full-width {
     width: 100% !important;
@@ -53,14 +73,11 @@ body {
 
 .background-coral:focus {
     background: var(--coral-color);
+    box-shadow: none !important;
    }
 
 .background-wine {
     background: var(--wine-color);
-}
-
-.logo {
-    margin: 10%;
 }
 
 .text-white {
@@ -109,11 +126,7 @@ body {
     transform: scale(1.2);
 
 }
-/*Styles Elements*/
-.body {
-    border-radius: 40px;
-    padding: 30px;
-}
+
 
 .center {
     text-align: center;
@@ -129,6 +142,8 @@ body {
     background-color: #9B46C6;
     border: 0;
     border-radius: 40px;
+    margin-right: 10px;
+    
 }
 
 .button-purple:hover {
@@ -139,6 +154,7 @@ body {
     background-color: #14AF8B;
     border: 0;
     border-radius: 40px;
+    margin-right: 10px;
 }
 
 .button-green:hover {
@@ -149,38 +165,66 @@ body {
     background-color: var(--wine-color);
     border: 0;
     border-radius: 40px;
+    margin-right: 10px;
 }
 
 .button-wine:hover {
     color:black !important;
 }
 
-
-
-.input{
-    background: rgba(255, 255, 255, 0.4);
-    text-align: center;
-    border-radius: 40px;
-    border: 0;
+#InputSidesSquare:focus {
+    box-shadow: 5px 1px 5px var(--main-bg-color) !important;
 }
+
+#InputCircleRadius:focus {
+    box-shadow: 5px 1px 5px var(--cian-color) !important;
+}
+
 
 .input-result {
     border-top: 0px;
     border-left:0px;
     border-right: 0px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid grey;
     border-radius: 40px;
     text-align: center;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
-.input-result[readonly] {
+.input-result-below {
     border-top: 0px;
     border-left:0px;
     border-right: 0px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid grey;
     border-radius: 40px;
     text-align: center;
-    background: var(--main-bg-color);
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.input-result-below-2 {
+    border-top: 0px;
+    border-left:0px;
+    border-right: 0px;
+    border-bottom: 2px solid grey;
+    border-radius: 40px;
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.border-purple {
+    border-color: var(--purple-color);
+}
+
+.border-green {
+    border-color: var(--green-color);
+}
+
+.border-wine {
+    border-color: var(--wine-color);
 }
 
 .display {
@@ -188,22 +232,11 @@ body {
 }
 
 
-.potency {
-    margin-left: -8%;
-
-}
-
 .fa {
-    font-size: 60px !important;
-    position:absolute;
-    bottom: -15px;
-}
+    font-size: 30px !important;
+    padding-right: 15px;
+} 
 
-.fa-caret-up {
-    font-size: 100px !important;
-    position: absolute;
-    bottom: -25px;
-}
 
 .form-label {
     padding-left: 65px !important;
@@ -232,35 +265,157 @@ body {
     background: rgba(255, 255, 255, 0) !important;
 }
 
-input:focus {
-    border: 0px !important;
-    box-shadow: none !important;
-    outline: 0 none !important;
-    background: rgba(255, 255, 255, 0.4) !important;
-
-}
-
-select {
-    box-shadow: none !important;
-}
-
 #SelectMeasuresTriangle {
     border-radius: 40px;
     margin-left: 20px;
     box-shadow: none;
-    background-color: var(--coral-color);
 }
 
 #SelectMeasuresSquare {
-    border-radius: 40px;
+    border-radius: 40px; 
     box-shadow: none;
-    background-color: var(--main-bg-color);
 }
 
 #SelectMeasuresCircle {
     border-radius: 40px;
     box-shadow: none;
-    background-color: var(--cian-color);
 }
+
+#SectionSquare {
+    width: 50%;
+    margin-left: 30%;
+}
+
+#SectionCircle {
+    width: 50%;
+    margin-left: 30%;
+}
+
+#SectionTriangle {
+    width: 50%;
+    margin-left: 30%;
+}
+
+.error {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 12px;
+    margin-top: 10px;
+    align-content: initial;
+}
+
+
+/*TABLET*/
+@media only screen and (min-width: 768px) and (max-width: 1067px) {
+
+    #SectionSquare {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    #SectionCircle {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    #SectionTriangle {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .padding-around {
+        padding: 0px;
+        padding-top: 0px;
+    }
+}
+
+/*MOBILE*/
+@media only screen and (max-width: 767px) {
+
+    #SectionSquare {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    #SectionCircle {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    #SectionTriangle {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .padding-around {
+        padding: 0px !important;
+        padding-top: 0px !important;
+    }
+
+    .center {
+        margin: 0px !important;
+    }
+
+    .body {
+        border-radius: 0px !important;
+        padding: 0px !important;
+    }
+
+    .card-body {
+        width: 100% !important;
+    }
+
+    .fa {
+        font-size: 20px !important;
+        padding-right: 15px;
+        padding-top: 5px;
+    } 
+
+    .input-result {
+        border-top: 0px;
+        border-left:0px;
+        border-right: 0px;
+        border-bottom: 2px solid grey;
+        border-radius: 40px;
+        text-align: center;
+        margin: 0px;
+        margin-top: 10px;
+    }
+    
+    .input-result-below {
+        border-top: 0px;
+        border-left:0px;
+        border-right: 0px;
+        border-bottom: 2px solid grey;
+        border-radius: 40px;
+        text-align: center;
+        margin-left: 0px;
+    }
+    
+    .input-result-below-2 {
+        border-top: 0px;
+        border-left:0px;
+        border-right: 0px;
+        border-bottom: 2px solid grey;
+        border-radius: 40px;
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+    
+    .button-green {
+        background-color: #14AF8B;
+        border: 0;
+        border-radius: 40px;
+        margin: 10px;
+
+    }
+
+
+
+}
+
 
 

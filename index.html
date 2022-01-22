@@ -25,210 +25,189 @@
         </nav>
     </header>
     <div class="container">
-        <section id="Main">
+        <!--MENU-->
+        <section id="menu">
             <br>
             <br>
             <h2 class="text-center align-text-middle"> <img src="assets/img/hello.png" alt="" width="35" height="35" class="d-inline-block align-text-middle"></img> I'm <b> MathFriend</b>, and I'm here for help you in some <b>tools math</b> <img src="assets/img/geometry.png" alt="" width="30" height="30" class="d-inline-block align-text-middle"></img></h2>
                <br>
                <h3 class="text-center align-text-middle ">¿What do you want to calculate today?</h3>
                <br>
-               <div class="card border-info mb-3" style="max-width: 18rem; border-radius: 15px;">
-                    <div class="card-header bg-transparent border-info"><b>Geometric</b></div>
-                    <div class="card-body">
-    
-                        <img src="assets/img/square.png"  class="square" width="80" alt="square" style="margin-left: 5%; margin-right: 15%;" title="square" onclick="removeHiddenSquare()">
-                        <img src="assets/img/circle.png" class="circle" width="80" alt="circle" title="circle"  style="margin-left: 5%;" onclick="removeHiddenCircle()">
-                        <img src="assets/img/triangle.png" class="triangle" width="80" alt="triangle" style="margin-left: 35%; margin-right: 25%; margin-top: 10%;" title="triangle" onclick="removeHiddenTriangle()">
+               <div class="row">
+                   <div class="col-md-3">
+                    <div class="card border-purple mb-3">
+                        <div class="card-header background-purple"><b>Geometric</b></div>
+                        <div class="card-body">
+        
+                            <img src="assets/img/square.png"  class="square" width="30%" alt="square" style="margin-left: 10%; margin-right: 15%;" title="square" onclick="removeHiddenSquare()">
+                            <img src="assets/img/circle.png" class="circle" width="30%" alt="circle" title="circle"  style="margin-right: 10%;" onclick="removeHiddenCircle()">
+                            <img src="assets/img/triangle.png" class="triangle" width="30%" alt="triangle" style="margin-left: 35%; margin-right: 25%; margin-top: 10%;" title="triangle" onclick="removeHiddenTriangle()">
+                        </div>
+                    </div>
+                   </div>
+               </div>
         </section>
-        <section id="SectionSquare">
-            <div class="row body background-purple square-content visually-hidden">
-                <div class="col-md-12 center" >
-                    <i class="fa fa-square-o purple"></i><label for="InputSidesSquare" class="form-label text-black padding-around"><b>How long each side of your square?</b></label>
-                </div>
-                <div class="col-md-4">
-                    <br>
+        <!--END-MENU-->
+       
+        <!--SQUARE-->
+        <section id="SectionSquare" class="padding-around">
+        <div class="card border-purple square-content visually-hidden">
+            <div class="card-header background-purple text-white">
+                <i class="fa fa-square-o text-white"></i>Square
+            </div>
+            <div class="card-body">
+            <div class="center">
+              <label for="InputSidesSquare" class="card-title text-black"><b>How long each side of your square?</b></label>
+            </div>
+              <div class="row body">
+                <div class="col-md-9">
+                    <input type="number" id="InputSidesSquare" class="form-control" />
+                    <span class="error-square visually-hidden text-danger error" id="ErrorSquare"></span>
                 </div>
                 <div class="col-md-3 center">
-                    <input type="number" id="InputSidesSquare" class="form-control input"/>
-                </div>
-                <div class="col-md-1 center">
                     <select name="SelectMeasures" id="SelectMeasuresSquare" class="form-select text-black border-0">
-                        <option value="millimeter" class="background-purple text-black">ml</option>
-                        <option value="centimeter" class="background-purple text-black">cm</option>
-                        <option value="meter"  class="background-purple text-black">mt</option>
-                        <option value="kilometer"  class="background-purple text-black">km</option>
+                        <option value="millimeter">ml</option>
+                        <option value="centimeter">cm</option>
+                        <option value="meter">mt</option>
+                        <option value="kilometer">km</option>
                     </select>
                 </div>
-                <div class="row padding-around">
-                    <div class="col-md-4">
-                        <br>
-                    </div>
-                    <div class="col-md-2 center">
-                        <button class="btn btn-info form-control button-purple text-white" onclick="calculateSquarePerimeter()">Get Perimeter</button>
-                    </div>
-                    <div class="col-md-2 center">
-                        <button class="btn btn-info form-control button-purple text-white" onclick="calculateSquareArea()">Get Area</button>
+              </div>
+            </div>
+            <div class="card-footer text-muted">
+                <div class="row center">
+                    <div class="col-md-12 center">
+                        <button class="btn btn-info button-purple text-white" onclick="calculateSquarePerimeter()">Get Perimeter</button>
+                        <button class="btn btn-info button-purple text-white" onclick="calculateSquareArea()">Get Area</button>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <br>
-                    </div>
-                    <div class="col-md-4 visually-hidden square-perimeter">
-                        <span class="form-control input-result background-purple " id="ResultSquarePerimeter"></span>
+                <div class="row center">
+                    <div class="col-md-11 visually-hidden square-perimeter">
+                        <span class="form-control input-result" id="ResultSquarePerimeter"></span>
                     </div>
                 </div>
-            
-                <div class="row">
-                    <div class="col-md-4">
-                        <br>
-                    </div>
-                    <div class="col-md-4 visually-hidden square-area">
-                        <span class="form-control input-result background-purple" id="ResultSquareArea"></span>
+                <div class="row center">
+                    <div class="col-md-11 visually-hidden square-area">
+                    <span class="form-control input-result-below" id="ResultSquareArea"></span>
                     </div>
                 </div>
             </div>
+          </div>
         </section>
-        <section id="Circle">
-            <div class="row body background-cian circle-content visually-hidden">
-                <div class="col-md-12 center" >
-                    <i class="fa fa-circle-o green"></i><label for="InputSidesSquare" class="form-label text-black padding-around"><b>How long is the radius of your Circle?</b></label>
+        <!--END-SQUARE-->
+
+        <!--CIRCLE-->
+        <section id="SectionCircle">
+            <div class="card border-green circle-content visually-hidden">
+                <div class="card-header background-cian text-white">
+                    <i class="fa fa-circle-o text-white"></i>Circle
                 </div>
-                <div class="col-md-4">
-                    <br>
-                </div>
-                <div class="col-md-3 center">
-                    <input type="number" id="InputCircleRadius" class="form-control input"/>
-                </div>
-                <div class="col-md-1 center">
-                    <select name="SelectMeasures" id="SelectMeasuresCircle" class="form-select text-black border-0">
-                        <option value="millimeter" class="background-cian text-black">ml</option>
-                        <option value="centimeter" class="background-cian text-black">cm</option>
-                        <option value="meter"  class="background-cian text-black">mt</option>
-                        <option value="kilometer"  class="background-cian text-black">km</option>
-                    </select>
-                </div>
-                <div class="row padding-around">
-                    <div class="col-md-3">
-                        <br>
+                <div class="card-body">
+                    <div class="center">
+                        <label for="InputCircleRadius" class="card-title text-black"><b>How long is the radius of your Circle?</b></label>
                     </div>
-                    <div class="col-md-2 center">
-                        <button class="btn btn-info form-control button-green text-white" onclick="calculateCircleDiameter()">Get Diameter</button>
+                    <div class="row body">
+                    <div class="col-md-9">
+                            <input type="number" id="InputCircleRadius" class="form-control input" required/>
+                            <span class="error-circle visually-hidden text-danger error" id="ErrorCircle"></span>
                     </div>
-                    <div class="col-md-2 center">
-                        <button class="btn btn-info form-control button-green text-white" onclick="calculateCirclePerimeter()">Get Perimeter</button>
-                    </div>
-                    <div class="col-md-2 center">
-                        <button class="btn btn-info form-control button-green text-white" onclick="calculateCircleArea()">Get Area</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <br>
-                    </div>
-                    <div class="col-md-4 visually-hidden circle-diameter">
-                        <span class="form-control input-result background-cian " id="ResultCircleDiameter"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <br>
-                    </div>
-                    <div class="col-md-4 visually-hidden circle-perimeter">
-                        <span class="form-control input-result background-cian " id="ResultCirclePerimeter"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <br>
-                    </div>
-                    <div class="col-md-4 visually-hidden circle-area">
-                        <span class="form-control input-result background-cian " id="ResultCircleArea"></span>
-                    </div>
-                </div>
-             
-            </div>
-        </section>
-        <section id="Triangle">
-            <div class="row body background-coral triangle-content visually-hidden">
-                <div class="col-md-12 center" >
-                    <i class="fa fa-caret-up wine" aria-hidden="true"></i><label for="InputSidesTriangle" class="form-label padding-around"><b>What are the measurements of your Triangle?</b></label>
-                </div>
-                <div class="col-md-4">
-                    <br>
-                </div>
-                <div class="col-md-4">
-                    <fieldset class="border rounded-3 p-3">
-                        <legend class="float-none w-auto px-3 font-14">Side A</legend>
-                        <input  class="background-coral border-0 form-control" id="InputSideATriangle"/>
-                    </fieldset>
-                    <fieldset class="border rounded-3 p-3">
-                        <legend class="float-none w-auto px-3 font-14">Side B</legend>
-                        <input  class="background-coral border-0 form-control" id="InputSideBTriangle"/>
-                    </fieldset>
-                    <fieldset class="border rounded-3 p-3">
-                        <legend class="float-none w-auto px-3 font-14">Base</legend>
-                        <input  class="background-coral border-0 form-control" id="InputBaseTriangle"/>
-                    </fieldset>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <br>
-                    </div>
-                    <div class="col-md-4">
-                        <select name="SelectMeasures" id="SelectMeasuresTriangle" class="form-select text-black border-0">
-                            <option value="millimeter" class="background-coral"> ml</option>
-                            <option value="centimeter" class="background-coral">cm</option>
-                            <option value="meter"  class="background-coral">mt</option>
-                            <option value="kilometer"  class="background-coral">km</option>
+                    <div class="col-md-3 center">
+                        <select name="SelectMeasures" id="SelectMeasuresCircle" class="form-select text-black border-0">
+                            <option value="millimeter">ml</option>
+                            <option value="centimeter">cm</option>
+                            <option value="meter">mt</option>
+                            <option value="kilometer">km</option>
                         </select>
                     </div>
+                  </div>
                 </div>
-               
-                <div class="row padding-around">
-                    <div class="col-md-4">
-                        <br>
+                <div class="card-footer text-muted">
+                    <div class="row center">
+                        <div class="col-md-12 center">
+                            <button class="btn btn-info button-green text-white" onclick="calculateCircleDiameter()">Get Diameter</button>
+                            <button class="btn btn-info button-green text-white" onclick="calculateCirclePerimeter()">Get Perimeter</button>
+                            <button class="btn btn-info button-green text-white" onclick="calculateCircleArea()">Get Area</button>
+                        </div>
                     </div>
-                    <div class="col-md-2 center">
-                        <button class="btn btn-info form-control button-wine text-white" onclick="calculateCirclePerimeter()">Get Perimeter</button>
+                    <div class="row center">
+                        <div class="col-md-11 visually-hidden circle-diameter">
+                            <span class="form-control input-result" id="ResultCircleDiameter"></span>
+                        </div>
                     </div>
-                    <div class="col-md-2 center">
-                        <button class="btn btn-info form-control button-wine text-white" onclick="calculateCircleArea()">Get Area</button>
+                    <div class="row center">
+                        <div class="col-md-11 visually-hidden circle-perimeter">
+                            <span class="form-control input-result-below" id="ResultCirclePerimeter"></span>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <br>
+                    <div class="row center">
+                        <div class="col-md-11 visually-hidden circle-area">
+                        <span class="form-control input-result-below-2" id="ResultCircleArea"></span>
+                        </div>
                     </div>
-                    <div class="col-md-4 visually-hidden triangle-perimeter">
-                        <span class="form-control input-result background-cian " id="ResultTrianglePerimeter"></span>
+                    
+              </div>
+            </section>
+            <!--END-CIRCLE-->
+        
+            <!--TRIANGLE-->
+            <section id="SectionTriangle">
+                <div class="card border-wine triangle-content visually-hidden">
+                    <div class="card-header background-coral text-white">
+                        <i class="fa fa-caret-up text-white"></i>Triangle
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <br>
+                    <div class="card-body">
+                      <center><label for="InputCircleRadius" class="card-title text-black"><b>What are the measurements of your Triangle?</b></label></center>
+                      <div class="row body">
+                        <div class="col-md-12">
+                            <fieldset class="border rounded-3 p-3">
+                                <legend class="float-none w-auto px-3 font-14">Side A</legend>
+                                <input type="number" class="background-coral border-0 form-control" id="InputSideATriangle" required/>
+                            </fieldset>
+                            <fieldset class="border rounded-3 p-3">
+                                <legend class="float-none w-auto px-3 font-14">Side B</legend>
+                                <input type="number" class="background-coral border-0 form-control" id="InputSideBTriangle" required/>
+                            </fieldset>
+                            <fieldset class="border rounded-3 p-3">
+                                <legend class="float-none w-auto px-3 font-14">Base</legend>
+                                <input type="number" class="background-coral border-0 form-control" id="InputBaseTriangle" required/>
+                            </fieldset>
+                            <fieldset class="border rounded-3 p-3">
+                                <legend class="float-none w-auto px-3 font-14">Height</legend>
+                                <input type="number" class="background-coral border-0 form-control" id="InputHeightTriangle"/>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-11">
+                            <select name="SelectMeasures" id="SelectMeasuresTriangle" class="form-select text-black border-0">
+                                <option value="millimeter">ml</option>
+                                <option value="centimeter">cm</option>
+                                <option value="meter">mt</option>
+                                <option value="kilometer">km</option>
+                            </select>
+                            <span class="error-triangle text-danger error" id="ErrorTriangle"></span>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-md-4 visually-hidden circle-perimeter">
-                        <span class="form-control input-result background-cian " id="ResultCirclePerimeter"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <br>
-                    </div>
-                    <div class="col-md-4 visually-hidden circle-area">
-                        <span class="form-control input-result background-cian " id="ResultCircleArea"></span>
-                    </div>
-                </div>
-             
-            </div>
-        </section>
-
-
-
-
-
-
+                    <div class="card-footer text-muted">
+                        <div class="row center">
+                            <div class="col-md-12 center">
+                                <button class="btn btn-info button-wine text-white" onclick="calculateTrianglePerimeter()">Get Perimeter</button>
+                                <button class="btn btn-info button-wine text-white" onclick="calculateTriangleArea()">Get Area</button>
+                                
+                            </div>
+                        </div>
+                        <div class="row center">
+                            <div class="col-md-11 visually-hidden triangle-perimeter">
+                                <span class="form-control input-result" id="ResultTrianglePerimeter"></span>
+                            </div>
+                        </div>
+                        <div class="row center">
+                            <div class="col-md-11 visually-hidden triangle-area">
+                                <span class="form-control input-result-below" id="ResultTriangleArea"></span>
+                            </div>
+                        </div>        
+                  </div>
+                </section>
+                <!--END-TRIANGLE-->
         <br>                  
     </div>          
 </body>

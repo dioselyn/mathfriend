@@ -7,17 +7,23 @@ function includeHidden(element) {
     return element[0].classList.add("visually-hidden");
 }
 
+function empty(element) {
+    if(element === '' || element ==='0' || element === 0) {
+        return true;
+    }
+}
+
 
 //SQUARE 
 function squarePerimeter(side) {
     const perimeter = side * 4;
-    return perimeter.toFixed(3);
+    return perimeter;
     
 } 
 
 function squareArea(side) {
    const area = side * side;
-   return area.toFixed(3);
+   return area;
 }
 
 //HTML SQUARE
@@ -36,25 +42,39 @@ function calculateSquarePerimeter() {
     const elementSquarePerimeter = document.getElementsByClassName("square-perimeter");
     const result = document.getElementById("ResultSquarePerimeter");
     const perimeter = squarePerimeter(side);
-    const measure = document.getElementById("SelectMeasures");
+    const measure = document.getElementById("SelectMeasuresSquare");
     const selected = measure.options[measure.selectedIndex].text;
-    
-    removeHidden(elementSquarePerimeter);
-    return  result.innerHTML = "Perimeter: " + perimeter + " " + selected;
+    const error = document.getElementsByClassName("error-square");
+    const errorId = document.getElementById("ErrorSquare");
+
+    if(empty(side) !== true) {
+        removeHidden(elementSquarePerimeter);
+        includeHidden(error);
+    return  result.innerHTML = "Perimeter: " + perimeter  + selected;
+    } else {
+        removeHidden(error);
+        return errorId.innerHTML = "Error: input empty or invalid!";
+    }
 }
    
 function calculateSquareArea() {
      const side =  document.getElementById("InputSidesSquare").value;
      const elementSquareArea = document.getElementsByClassName("square-area");
      const result = document.getElementById("ResultSquareArea");
-     const measure = document.getElementById("SelectMeasures");
+     const measure = document.getElementById("SelectMeasuresSquare");
      const selected = measure.options[measure.selectedIndex].text;
      const area = squareArea(side);
-     
-     
+     const error = document.getElementsByClassName("error-square");
+     const errorId = document.getElementById("ErrorSquare");
 
-     removeHidden(elementSquareArea);
-     return result.innerHTML = `Area: ${area} ${selected}<sup>2</sup>`;
+     if(empty(side) !== true) {
+        removeHidden(elementSquareArea);
+        includeHidden(error);
+        return result.innerHTML = `Area: ${area}${selected}<sup>2</sup>`;
+     } else {
+        removeHidden(error);
+        return errorId.innerHTML = "Error: input empty or invalid!";
+     }
 }
 
 
@@ -94,9 +114,17 @@ function calculateCircleDiameter() {
     const measure =  document.getElementById("SelectMeasuresCircle");
     const selected = measure.options[measure.selectedIndex].text;
     const diameter = circleDiameter(radius);
+    const error = document.getElementsByClassName("error-circle");
+    const errorId = document.getElementById("ErrorCircle");
 
-    removeHidden(elementCircleDiamater);
-    return result.innerHTML = "Diameter: " + diameter + " " + selected;
+     if(empty(radius) !== true) {
+        removeHidden(elementCircleDiamater);
+        includeHidden(error);
+        return result.innerHTML = "Diameter: " + diameter + selected;
+     } else {
+        removeHidden(error);
+        return errorId.innerHTML = "Error: input empty or invalid!";
+     }
 }
 
 function calculateCirclePerimeter() {
@@ -106,9 +134,17 @@ function calculateCirclePerimeter() {
     const measure =  document.getElementById("SelectMeasuresCircle");
     const selected = measure.options[measure.selectedIndex].text;
     const perimeter = circlePerimeter(radius);
+    const error = document.getElementsByClassName("error-circle");
+    const errorId = document.getElementById("ErrorCircle");
 
-    removeHidden(elementCirclePerimeter);
-    return result.innerHTML = "Perimeter: " + perimeter + " " + selected;
+    if(empty(radius) !== true) {
+        removeHidden(elementCirclePerimeter);
+        includeHidden(error);
+        return result.innerHTML = "Perimeter: " + perimeter + selected;
+     } else {
+        removeHidden(error);
+        return errorId.innerHTML = "Error: input empty or invalid!";
+     }
 }
 
 function calculateCircleArea() {
@@ -118,16 +154,29 @@ function calculateCircleArea() {
     const measure =  document.getElementById("SelectMeasuresCircle");
     const selected = measure.options[measure.selectedIndex].text;
     const area = circleArea(radius);
+    const error = document.getElementsByClassName("error-circle");
+    const errorId = document.getElementById("ErrorCircle");
 
-    removeHidden(elementCirclePerimeter);
-    return result.innerHTML = "Area: " + area + " " + selected + "<sup>2</sup>";
+    if(empty(radius) !== true) {
+        removeHidden(elementCirclePerimeter);
+        includeHidden(error);
+        return result.innerHTML = "Area: " + area + selected + "<sup>2</sup>";
+     } else {
+        removeHidden(error);
+        return errorId.innerHTML = "Error: input empty or invalid!";
+     }
+
 }
 
 //TRIANGLE
 function trianglePerimeter(side1, side2, base) {
     const perimeter = side1 + side2 + base;
-    return perimeter.toFixed(3);
+    return perimeter;
   }
+
+function triangleArea(base, height) {
+    return (base * height) / 2;
+} 
   
 
 
@@ -143,14 +192,68 @@ function removeHiddenTriangle() {
 
 
 function calculateTrianglePerimeter() {
-    const side1 = document.getElementById("InputSideATriangle").value;
-    const side2 = document.getElementById("InputSideBTriangle").value;
-    const base = document.getElementById("InputBaseTriangle").value;
+    const side1 = Number(document.getElementById("InputSideATriangle").value);
+    const side2 = Number(document.getElementById("InputSideBTriangle").value);
+    const base = Number(document.getElementById("InputBaseTriangle").value);
     const elementTrianglePerimeter = document.getElementsByClassName("triangle-perimeter");
+    const measure =  document.getElementById("SelectMeasuresTriangle");
+    const selected = measure.options[measure.selectedIndex].text;
+    const result = document.getElementById("ResultTrianglePerimeter");
     const perimeter = trianglePerimeter(side1,side2,base);
+    const error = document.getElementsByClassName("error-triangle");
+    const errorId = document.getElementById("ErrorTriangle");
 
-    removeHidden(elementTrianglePerimeter);
+    
+    if(empty(side1) === true) {
+        removeHidden(error);
+        return errorId.innerHTML = "Error: input  empty or invalid!";
+    } 
+    if(empty(side2) === true) {
+        removeHidden(error);
+        return errorId.innerHTML = "Error: input  empty or invalid!";
+    }
+    if(empty(base) === true) {
+        removeHidden(error);
+        return errorId.innerHTML = "Error: input  empty or invalid!";
+    }
+    else {
+        removeHidden(elementTrianglePerimeter);
+        includeHidden(error);
+        return result.innerHTML = "Perimeter: " + perimeter + selected;
+    }
 }
+
+function calculateTriangleArea() {
+    const base = Number(document.getElementById("InputBaseTriangle").value);
+    const height = Number(document.getElementById("InputHeightTriangle").value);
+    const elementTriangleArea = document.getElementsByClassName("triangle-area");
+    const result = document.getElementById("ResultTriangleArea");
+    const measure =  document.getElementById("SelectMeasuresTriangle");
+    const selected = measure.options[measure.selectedIndex].text;
+    const area = triangleArea(base, height);
+    const error = document.getElementsByClassName("error-triangle");
+    const errorId = document.getElementById("ErrorTriangle");
+
+    
+   
+    if(empty(base) === true) {
+        removeHidden(error);
+        return errorId.innerHTML = "Error: input  empty or invalid!";
+    }
+    if(empty(height) === true) {
+        removeHidden(error);
+        return errorId.innerHTML = "Error: input  empty or invalid!";
+    }
+    else {
+        removeHidden(elementTriangleArea);
+        includeHidden(error);
+        return result.innerHTML = "Area: " + area + selected + "<sup>2</sup>";
+    }
+
+}
+
+
+
 
 
 
