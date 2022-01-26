@@ -1,19 +1,3 @@
-//GLOBAL
-function removeHidden(element) {
-  return element[0].classList.remove("visually-hidden");
-}
-
-function includeHidden(element) {
-    return element[0].classList.add("visually-hidden");
-}
-
-function empty(element) {
-    if(element === '' || element ==='0' || element === 0) {
-        return true;
-    }
-}
-
-
 //SQUARE 
 function squarePerimeter(side) {
     const perimeter = side * 4;
@@ -31,9 +15,11 @@ function removeHiddenSquare() {
     const squareBody = document.getElementsByClassName("square-content");
     const circleContent = document.getElementsByClassName("circle-content");
     const triangleContent = document.getElementsByClassName("triangle-content");
+    const discountsContent = document.getElementsByClassName("discounts-content");
 
     includeHidden(circleContent);
     includeHidden(triangleContent);
+    includeHidden(discountsContent);
     return removeHidden(squareBody);
 }
 
@@ -102,8 +88,10 @@ function removeHiddenCircle() {
     const circleContent = document.getElementsByClassName("circle-content");
     const squareContent = document.getElementsByClassName("square-content");
     const triangleContent = document.getElementsByClassName("triangle-content");
+    const discountsContent = document.getElementsByClassName("discounts-content");
     includeHidden(squareContent);
     includeHidden(triangleContent);
+    includeHidden(discountsContent);
     return removeHidden(circleContent);
 }
 
@@ -185,8 +173,10 @@ function removeHiddenTriangle() {
     const triangleContent = document.getElementsByClassName("triangle-content");
     const squareContent = document.getElementsByClassName("square-content");
     const circleContent = document.getElementsByClassName("circle-content");
+    const discountsContent = document.getElementsByClassName("discounts-content");
     includeHidden(squareContent);
     includeHidden(circleContent);
+    includeHidden(discountsContent);
     return removeHidden(triangleContent);
 }
 
