@@ -250,11 +250,6 @@ input:focus {
     border-color: var(--wine-color);
 }
 
-.display {
-    display: block;
-}
-
-
 .fa {
     font-size: 30px !important;
     padding-right: 15px;
@@ -329,6 +324,11 @@ input:focus {
     margin-left: 30%;
 }
 
+#SectionAverage {
+    width: 50%;
+    margin-left: 30%;
+}
+
 .error {
     padding-left: 12px;
     padding-right: 12px;
@@ -361,6 +361,11 @@ input:focus {
         margin-left: 0%;
     }
 
+    #SectionAverage{
+        width: 100%;
+        margin-left: 0%;
+    }
+
     .padding-around {
         padding: 0px;
         padding-top: 0px;
@@ -375,6 +380,11 @@ input:focus {
 
 /*MOBILE*/
 @media only screen and (max-width: 767px) {
+
+    select {
+        width: 90% !important;
+    }
+
 
     #SectionSquare {
         width: 100%;
@@ -392,6 +402,11 @@ input:focus {
     }
 
     #SectionDiscounts {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    #SectionAverage{
         width: 100%;
         margin-left: 0%;
     }
@@ -460,6 +475,7 @@ input:focus {
 
     }
 
+    
 
 
 }

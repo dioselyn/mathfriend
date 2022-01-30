@@ -285,58 +285,44 @@
             <section id="SectionAverage">
                 <div class="card border-wine average-content visually-hidden">
                     <div class="card-header background-coral text-white">
-                        <i class="fa fa-calculator text-white"></i>Average
+                        <i class="fa fa-calculator text-white"></i>Arithmetic Average 
                     </div>
                     <div class="card-body">
-                      <center><label for="InputCircleRadius" class="card-title text-black"><b>What are the measurements of your Triangle?</b></label></center>
-                      <div class="row body">
-                        <div class="col-md-12">
-                            <fieldset class="border rounded-3 p-3">
-                                <legend class="float-none w-auto px-3 font-14">Side A</legend>
-                                <input type="number" class="background-coral border-0 form-control" id="InputSideATriangle" required/>
-                            </fieldset>
-                            <fieldset class="border rounded-3 p-3">
-                                <legend class="float-none w-auto px-3 font-14">Side B</legend>
-                                <input type="number" class="background-coral border-0 form-control" id="InputSideBTriangle" required/>
-                            </fieldset>
-                            <fieldset class="border rounded-3 p-3">
-                                <legend class="float-none w-auto px-3 font-14">Base</legend>
-                                <input type="number" class="background-coral border-0 form-control" id="InputBaseTriangle" required/>
-                            </fieldset>
-                            <fieldset class="border rounded-3 p-3">
-                                <legend class="float-none w-auto px-3 font-14">Height</legend>
-                                <input type="number" class="background-coral border-0 form-control" id="InputHeightTriangle"/>
-                            </fieldset>
+                      <center><label for="InputCircleRadius" class="card-title text-black"><b>How much data do you want to enter?</b></label></center>
+                      <div class="row">
+                        <div class="col-md-3">
+                            <p></p>
                         </div>
-                        <div class="col-md-11">
-                            <select name="SelectMeasures" id="SelectMeasuresTriangle" class="form-select text-black border-0">
-                                <option value="millimeter">ml</option>
-                                <option value="centimeter">cm</option>
-                                <option value="meter">mt</option>
-                                <option value="kilometer">km</option>
-                            </select>
-                            <span class="error-triangle text-danger error" id="ErrorTriangle"></span>
+                        <div class="col-md-6">
+                            <input type="number" id="InputAmountData" class="form-control input" style="margin-bottom: 10px;" onkeyup="addInput()" required/>
+                        </div>
+                        <div class="col-md-3">
+                            <p></p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-3">
+                            <p></p>
+                        </div>
+                        <div class="col-md-6" id="addInputs">
+                           
+                        </div>
+                        <div class="col-md-3">
+                            <p></p>
                         </div>
                       </div>
                     </div>
-                    <div class="card-footer text-muted">
+                    <div class="card-footer text-muted visually-hidden footer-average">
                         <div class="row center">
-                            <div class="col-md-12 center">
-                                <button class="btn btn-info button-wine text-white" onclick="calculateTrianglePerimeter()">Get Perimeter</button>
-                                <button class="btn btn-info button-wine text-white" onclick="calculateTriangleArea()">Get Area</button>
-                                
+                            <div class="col-md-12">
+                                <button class="btn btn-info button-wine text-white" onclick="calculateArithmeticAverage()">Calculate</button>
                             </div>
                         </div>
                         <div class="row center">
-                            <div class="col-md-11 visually-hidden triangle-perimeter">
-                                <span class="form-control input-result" id="ResultTrianglePerimeter"></span>
+                            <div class="col-md-11 visually-hidden result-average">
+                                <span class="form-control input-result" id="ResultAverage"></span>
                             </div>
-                        </div>
-                        <div class="row center">
-                            <div class="col-md-11 visually-hidden triangle-area">
-                                <span class="form-control input-result-below" id="ResultTriangleArea"></span>
-                            </div>
-                        </div>        
+                        </div>      
                   </div>
                 </section>
             <!--END-AVERAGE-->
