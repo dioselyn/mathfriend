@@ -100,7 +100,8 @@ input:focus {
     background: var(--main-bg-color);
     border: none;
 }
-/*Figures*/
+
+/* Menu Figures*/
 .square:hover {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -125,6 +126,27 @@ input:focus {
     -ms-transform: scale(1.2);
     transform: scale(1.2);
 
+}
+
+/*Menu Discounts*/
+
+.img-discounts:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/*Menu Averages*/
+
+.btn-averages:hover {
+
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 
