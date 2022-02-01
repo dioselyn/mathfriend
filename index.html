@@ -62,9 +62,8 @@
                     <div class="card border-wine  mb-3">
                         <div class="card-header background-coral"><b>Averages</b></div>
                         <div class="card-body center">
-                            <button type="button" class="btn btn-danger btn-averages"  style="margin-top:15px" onclick="removeHiddenAverage()"><i class="fa fa-calculator" aria-hidden="true"></i>Average</button>
-                            <button type="button" class="btn btn-danger btn-averages" style="margin-top:15px; padding-right:15px; padding-left: 15px;"><i class="fa fa-calculator" aria-hidden="true"></i>Median</button><br>
-                            <button type="button" class="btn btn-danger btn-averages" style="margin-top:15px; margin-bottom: 5px; padding-right:22px; padding-left: 22px;"><i class="fa fa-calculator" aria-hidden="true"></i>Mode</button>
+                            <button type="button" class="btn btn-danger btn-averages"  style="margin-top:35px; margin-bottom:45px; font-size: 20px; align-items: center; align-content: center;text-align: center; padding: 15px; padding-left: 25px; padding-right: 5px;" onclick="removeHiddenAverage()"><i class="fa fa-calculator" style="font-size: 80px !important;"" aria-hidden="true"></i></button>
+                    
                         </div>
                     </div>
                    </div>
@@ -285,7 +284,7 @@
             <section id="SectionAverage">
                 <div class="card border-wine average-content visually-hidden">
                     <div class="card-header background-coral text-white">
-                        <i class="fa fa-calculator text-white"></i>Arithmetic Average 
+                        <i class="fa fa-calculator text-white"></i>Averages 
                     </div>
                     <div class="card-body">
                       <center><label for="InputCircleRadius" class="card-title text-black"><b>How much data do you want to enter?</b></label></center>
@@ -315,12 +314,20 @@
                     <div class="card-footer text-muted visually-hidden footer-average">
                         <div class="row center">
                             <div class="col-md-12">
-                                <button class="btn btn-info button-wine text-white" onclick="calculateArithmeticAverage()">Calculate</button>
+                                <button class="btn btn-info button-wine text-white" onclick="calculateArithmeticAverage()">Average</button>
+                                <button class="btn btn-info button-wine text-white" onclick="calculateMedian()">Median</button>
+                                <button class="btn btn-info button-wine text-white" onclick="calculateMode()">Mode</button>
                             </div>
                         </div>
                         <div class="row center">
-                            <div class="col-md-11 visually-hidden result-average">
+                            <div class="col-md-12 visually-hidden result-average">
                                 <span class="form-control input-result" id="ResultAverage"></span>
+                            </div>
+                            <div class="col-md-12 visually-hidden result-median">
+                                <span class="form-control input-result-below" id="ResultMedian"></span>
+                            </div>
+                            <div class="col-md-12 visually-hidden result-mode">
+                                <span class="form-control input-result-below-2" id="ResultMode"></span>
                             </div>
                         </div>      
                   </div>
