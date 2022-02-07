@@ -376,6 +376,10 @@ input:focus {
         margin-top: 0px;
         width: 50%;
     }
+
+    .fa-calculator {
+        font-size: 200% !important;
+    }
 }
 
 /*MOBILE*/
@@ -473,6 +477,11 @@ input:focus {
         border-radius: 40px;
         margin: 10px;
 
+    }
+
+    .btn {
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 
     

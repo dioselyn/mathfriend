@@ -36,7 +36,7 @@ function mode(values) {
     const [repetitions, mode] = values.reduce(
       (acc, val) => {
         const arrayNumberOfTimes = count(values, val);
-        if (arrayNumberOfTimes === acc[0] && acc[1].every((item) => item !== val)) {
+        if (arrayNumberOfTimes === acc[0] && acc[1].every((item) => item !== val) ) {
           acc[1].push(val);
         } else if (arrayNumberOfTimes > acc[0]) {
           acc = [arrayNumberOfTimes, [val]];
@@ -154,7 +154,11 @@ function calculateMedian() {
       const element = document.getElementsByClassName("result-mode");
       removeHidden(element);
 
+      if (value.repetitions > 1) {
       result.innerText ="The mode is: "+ value.mode +" repeats: " + value.repetitions + " times" ;
+      } else {
+        result.innerText ="The mode not exist!";
+      }
      
   }
   
