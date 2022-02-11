@@ -56,11 +56,13 @@ function removeHiddenAverage() {
     const circleContent = document.getElementsByClassName("circle-content");
     const triangleContent = document.getElementsByClassName("triangle-content");
     const squareContent = document.getElementsByClassName("square-content");
+    const interestContent = document.getElementsByClassName("interest-content");
 
     includeHidden(circleContent);
     includeHidden(triangleContent);
     includeHidden(squareContent);
     includeHidden(discountsContent);
+    includeHidden(interestContent);
     return removeHidden(averageContent);
 }
 

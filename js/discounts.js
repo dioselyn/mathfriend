@@ -13,11 +13,13 @@ function removeHiddenDiscounts() {
     const triangleContent = document.getElementsByClassName("triangle-content");
     const squareContent = document.getElementsByClassName("square-content");
     const averageContent = document.getElementsByClassName("average-content");
+    const interestContent = document.getElementsByClassName("interest-content");
 
     includeHidden(circleContent);
     includeHidden(triangleContent);
     includeHidden(squareContent);
     includeHidden(averageContent);
+    includeHidden(interestContent);
     return removeHidden(discountsContent);
 }
 

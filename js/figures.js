@@ -17,12 +17,14 @@ function removeHiddenSquare() {
     const triangleContent = document.getElementsByClassName("triangle-content");
     const discountsContent = document.getElementsByClassName("discounts-content");
     const averageContent = document.getElementsByClassName("average-content");
+    const interestContent = document.getElementsByClassName("interest-content");
     
 
     includeHidden(circleContent);
     includeHidden(triangleContent);
     includeHidden(discountsContent);
     includeHidden(averageContent);
+    includeHidden(interestContent);
     return removeHidden(squareBody);
 }
 
@@ -93,11 +95,13 @@ function removeHiddenCircle() {
     const triangleContent = document.getElementsByClassName("triangle-content");
     const discountsContent = document.getElementsByClassName("discounts-content");
     const averageContent = document.getElementsByClassName("average-content");
+    const interestContent = document.getElementsByClassName("interest-content");
 
     includeHidden(squareContent);
     includeHidden(triangleContent);
     includeHidden(discountsContent);
     includeHidden(averageContent);
+    includeHidden(interestContent);
     return removeHidden(circleContent);
 }
 
@@ -181,11 +185,13 @@ function removeHiddenTriangle() {
     const circleContent = document.getElementsByClassName("circle-content");
     const discountsContent = document.getElementsByClassName("discounts-content");
     const averageContent = document.getElementsByClassName("average-content");
+    const interestContent = document.getElementsByClassName("interest-content");
 
     includeHidden(squareContent);
     includeHidden(circleContent);
     includeHidden(discountsContent);
     includeHidden(averageContent);
+    includeHidden(interestContent);
     return removeHidden(triangleContent);
 }
 

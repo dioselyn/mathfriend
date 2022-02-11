@@ -12,4 +12,8 @@ function removeHidden(element) {
           return true;
       }
   }
+
+  function valuePercent(percent) {
+    return percent / 100;
+  }
   

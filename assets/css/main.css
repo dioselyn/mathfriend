@@ -6,7 +6,9 @@
     --purple-color:#9B46C6;
     --green-color:#14AF8B;
     --wine-color:#7E1B2B;
+    --blue-color: #0EAFCA;
 }
+
 
 body {
     font-family: 'Comfortaa', cursive;
@@ -32,6 +34,19 @@ input:focus {
     padding: 30px;
 }
 
+.card {
+    overflow: hidden !important;
+}
+
+.card-header {
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+.card-header:first-child {
+    overflow: hidden !important;
+    border-radius: 0px !important;
+}
 
 .full-width {
     width: 100% !important;
@@ -74,10 +89,19 @@ input:focus {
 .background-coral:focus {
     background: var(--coral-color);
     box-shadow: none !important;
-   }
+}
 
 .background-wine {
     background: var(--wine-color);
+}
+
+.background-blue {
+    background: var(--blue-color);
+}
+
+.background-blue:focus {
+    background: var(--blue-color);
+    box-shadow: none !important;
 }
 
 .text-white {
@@ -194,6 +218,13 @@ input:focus {
     color:black !important;
 }
 
+.button-blue {
+    background-color: var(--blue-color);
+    border: 0;
+    border-radius: 40px;
+    margin-right: 10px;
+}
+
 /*INPUTS*/
 #InputSidesSquare:focus {
     box-shadow: 5px 1px 5px var(--main-bg-color) !important;
@@ -248,6 +279,10 @@ input:focus {
 
 .border-wine {
     border-color: var(--wine-color);
+}
+
+.border-blue {
+    border-color: var(--blue-color);
 }
 
 .fa {
@@ -325,6 +360,11 @@ input:focus {
 }
 
 #SectionAverage {
+    width: 50%;
+    margin-left: 30%;
+}
+
+#SectionInterest {
     width: 50%;
     margin-left: 30%;
 }
@@ -411,6 +451,11 @@ input:focus {
     }
 
     #SectionAverage{
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    #SectionInterest {
         width: 100%;
         margin-left: 0%;
     }

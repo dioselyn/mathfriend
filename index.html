@@ -67,6 +67,16 @@
                     </div>
                    </div>
                    <!--END-AVERAGES-->
+                   <!--INTEREST-->
+                   <div class="col-md-3">
+                    <div class="card border-blue  mb-3">
+                        <div class="card-header background-blue"><b>Interest</b></div>
+                        <div class="card-body center">
+                            <img src="assets/img/pig.png" width="60%" class="img-discounts" alt="discounts"  title="discounts" style="margin-bottom: 15px; margin-top: 13px;" onclick="removeHiddenInterest()">
+                    </div>
+                    </div>
+                   </div>
+                   <!--END-INTEREST-->
                </div>
         </section>
         <!--END-MENU-->
@@ -332,13 +342,54 @@
                   </div>
                 </section>
             <!--END-AVERAGE-->
+
+            <!--INTEREST SECTION-->
+                 <section id="SectionInterest">
+                    <div class="card border-blue interest-content visually-hidden">
+                        <div class="card-header background-blue text-white">
+                            <i class="fa fa-percent text-white"></i>Simple and Compound Interest for Year
+                        </div>
+                        <div class="card-body">
+                            <fieldset class="border rounded-3 p-3">
+                                <legend class="float-none w-auto px-3 font-14">Money</legend>
+                                <input type="number" class="background-blue border-0 form-control" id="InputMoney" required/>
+                            </fieldset>
+                            <fieldset class="border rounded-3 p-3">
+                                <legend class="float-none w-auto px-3 font-14">Years of Interest</legend>
+                                <input type="number" class="background-blue border-0 form-control" id="InputYears" required/>
+                            </fieldset>
+                            <fieldset class="border rounded-3 p-3">
+                                <legend class="float-none w-auto px-3 font-14">Interest Rate %</legend>
+                                <input type="number" class="background-blue border-0 form-control" id="InputPercent" required/>
+                            </fieldset>
+                            <span class="error-interest visually-hidden text-danger error" id="ErrorInterest"></span>
+                        </div>
+                         
+                        <div class="card-footer text-muted footer-average">
+                            <div class="row center">
+                                <div class="col-md-12">
+                                    <button class="btn btn-info button-blue text-white" onclick="calculateInterest()">Calculate Investment</button>
+                                </div>
+                            </div>
+                            <div class="row center">
+                                <div class="col-md-12 visually-hidden simple-interest">
+                                    <span class="form-control input-result" id="ResultSimpleInterest"></span>
+                                </div>
+                                <div class="col-md-12 visually-hidden compount-interest">
+                                    <span class="form-control input-result-below" id="ResultCompountInterest"></span>
+                                </div>
+                            </div>      
+                      </div>
+                    </section>
+                <!--END-INTEREST-->
         <br>                  
     </div>          
 </body>
 <footer>
-    <script src="./js/global.js"></script>
+    <script src="./js/helpers.js"></script>
     <script src="./js/figures.js"></script>
     <script src="./js/discounts.js"></script>
     <script src="./js/averages.js"></script>
+    <script src="./js/interest.js"></script>
     <script src="./node_modules/jquery/dist/jquery.min.js" ntegrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 </footer>
